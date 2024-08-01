@@ -6,6 +6,15 @@ import useMeasure from "react-use-measure";
 export default function AutoScrollCarousel({ collection, direction }) {
   const [data, setData] = useState([]);
 
+  // let x;
+
+  // if (direction === "left") {
+  //   x = "left-5"
+  // }
+  // else {
+  //   x = "right-5"
+  // }
+
   let [ref, { width }] = useMeasure();
 
   const xTranslation = useMotionValue(0);
@@ -54,7 +63,7 @@ export default function AutoScrollCarousel({ collection, direction }) {
 
   return (
     <motion.div
-      className="flex justify-center items-center gap-4 mb-[20px]"
+      className={`flex justify-center items-center`}
       ref={ref}
       style={{ x: xTranslation }}
     >
@@ -64,7 +73,6 @@ export default function AutoScrollCarousel({ collection, direction }) {
           src={data.image_url}
           height={200}
           width={200}
-          style={{ objectFit: "cover" }}
           alt={data.name}
         />
       ))}
