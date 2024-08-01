@@ -4,11 +4,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import BannerCard from "@/components/BannerCard";
 import Link from "next/link";
-import AutoScrollCarousel from "@/components/AutoScrollCarousel";
+import { Suspense } from "react";
+import Loading from "@/components/loading";
 
 export default function Home() {
+
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <div
         className="h-screen w-screen overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/bg-video-gif.gif')" }}
@@ -20,14 +22,16 @@ export default function Home() {
           className="flex justify-center items-center gap-x-[10px] text-xl text-[#dad7cd] font-medium absolute bottom-3 left-[50%] ml-[-100px]"
         >
           Scroll for more{" "}
-          <Link href={"/"}><Image src="/assets/down.svg" height={17} width={17} alt="Down" /></Link>
+          <Link href={"/"}>
+            <Image src="/assets/down.svg" height={17} width={17} alt="Down" />
+          </Link>
         </motion.p>
       </div>
-      <div className="bg-[#dad7cd] p-[20px] text-center">
+      <div className="bg-[#0d0d0d] p-[20px] text-center">
         <motion.h1
           initial={{ opacity: 0, left: -100 }}
           whileInView={{ opacity: 1, left: 0 }}
-          className="relative text-[80px] mb-[20px] font-extrabold text-[#344e41]"
+          className="relative text-[80px] mb-[20px] font-extrabold text-[#dad7cd]"
         >
           Our Staring Collections
         </motion.h1>
@@ -83,8 +87,9 @@ export default function Home() {
           <h1 className="text-[65px] text-[#344e41] font-bold">
             Why you need us ?
           </h1>
-          <p className="text-[19px] text-[#344e41] mb-[20px]">
-            You need the BEST that&apos;s why you need us
+          <p className="text-[19px] text-[#344e41] mb-[30px]">
+            You need the BEST that&apos;s why you need us. Come and join us so
+            we can help you out in making the right choice for your next NFT
           </p>
           <Link
             className="bg-[#344e41] text-[#dad7cd] p-[13px] pl-[20px] pr-[20px] font-medium rounded-full transition-all hover:bg-[#202f28]"
@@ -102,10 +107,25 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="w-screen bg-[#0d0d0d] pt-[40px] pb-[40px] overflow-x-hidden">
-        <AutoScrollCarousel collection={"azuki"} direction="left" />
-        <AutoScrollCarousel collection={"valhalla"} direction="right" />
+      <div className="group w-screen h-[720px] bg-[url('/assets/promo.png')] bg-cover bg-center]">
+        <motion.div className="w-full h-full bg-[rgba(0,0,0,0.85)] hidden justify-center items-center group-hover:flex">
+           
+          <Link
+            className="bg-[#dad7cd] inline-flex justify-center items-center gap-x-2 p-[20px] rounded-full pl-[40px] pr-[40px] text-lg font-medium hover:bg-[#92908a]"
+            href={"/gallery"}
+          >
+            See Gallery{" "}
+            <Image
+              src="/assets/right-arrow.png"
+              height={65}
+              width={32.5}
+              alt="What we do ?"
+            />
+          </Link>
+        </motion.div>
       </div>
-    </>
+
+      <div></div>
+    </Suspense>
   );
 }
