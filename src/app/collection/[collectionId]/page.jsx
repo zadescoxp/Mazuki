@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Loading from "@/components/loading.js";
+import { Suspense, useEffect, useState } from "react";
 
 export default function Collection({params}) {
   const [data, setData] = useState([]);
@@ -24,7 +25,7 @@ export default function Collection({params}) {
     api();
   });
 
-  return <div>
+  return <Suspense fallback={<Loading />}>
     {data.map((data, index) => <h1 key={index}>{data.identifier}</h1>)}
-  </div>;
+  </Suspense>;
 }
