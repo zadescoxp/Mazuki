@@ -13,11 +13,15 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@kinde-oss/kinde-auth-nextjs": "^2.3.6",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.3.19",
     "next": "14.2.5",
     "react": "^18",
+    "react-css-spinners": "^4.0.2",
     "react-dom": "^18",
-    "react-use-measure": "^2.1.1"
+    "react-spinners": "^0.14.1",
+    "react-use-measure": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^8",
