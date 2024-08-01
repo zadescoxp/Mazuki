@@ -5,24 +5,24 @@ import useMeasure from "react-use-measure";
 
 export default function AutoScrollCarousel({ collection, direction }) {
   const [data, setData] = useState([]);
-  const [ref, { width }] = useMeasure();
+
+  let [ref, { width }] = useMeasure();
 
   const xTranslation = useMotionValue(0);
 
   useEffect(() => {
     let controls;
-    let finalPos
+    let finalPos;
 
     if (direction === "left") {
-        finalPos = -width / 2 - 5;
-    }
-    else {
-        finalPos = width / 2 - 5;
+      finalPos = (-width / 2) - 8;
+    } else {
+      finalPos = (width / 2) + 8;
     }
 
     controls = animate(xTranslation, [0, finalPos], {
       ease: "linear",
-      duration: 15,
+      duration: 25,
       repeat: Infinity,
       repeatType: "loop",
       repeatDelay: 0,
@@ -40,21 +40,21 @@ export default function AutoScrollCarousel({ collection, direction }) {
   };
 
   useEffect(() => {
-    async function api() {
+    async function getApi() {
       const res = await fetch(
-        `https://api.opensea.io/api/v2/collection/${collection}/nfts?limit=15`,
+        `https://api.opensea.io/api/v2/collection/${collection}/nfts?limit=25`,
         options
       );
       const response = await res.json();
       setData(response.nfts);
     }
 
-    api();
-  });
+    getApi();
+  }, []);
 
   return (
     <motion.div
-      className="flex justify-center items-center gap-x-[10px] mb-[20px]"
+      className="flex justify-center items-center gap-4 mb-[20px]"
       ref={ref}
       style={{ x: xTranslation }}
     >
@@ -64,6 +64,7 @@ export default function AutoScrollCarousel({ collection, direction }) {
           src={data.image_url}
           height={200}
           width={200}
+          style={{ objectFit: "cover" }}
           alt={data.name}
         />
       ))}

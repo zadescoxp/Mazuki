@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         {children}
-        <div className="w-screen flex items-center justify-between p-[1%] fixed top-0 left-0">
+        <div className="w-screen flex items-center justify-between p-[1%] fixed top-0 left-0 overflow-x-hidden">
           <Image src={"/assets/logo.png"} height={50} width={100} alt="Logo" />
 
           <div className="flex justify-between w-[auto] gap-x-[20px] bg-[rgba(218,215,205,0.5)] rounded-full border-[#344e41] border-[1px] p-[25px] pl-[40px] pr-[40px] text-[17px] font-medium">

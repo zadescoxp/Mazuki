@@ -102,7 +102,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="w-screen bg-[#0d0d0d] p-[20px]">
+      <div className="w-screen bg-[#0d0d0d] pt-[40px] pb-[40px] overflow-x-hidden">
         <AutoScrollCarousel collection={"azuki"} direction="left" />
         <AutoScrollCarousel collection={"valhalla"} direction="right" />
       </div>
