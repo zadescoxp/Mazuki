@@ -6,6 +6,7 @@ import BannerCard from "@/components/BannerCard";
 import Link from "next/link";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -33,7 +34,7 @@ export default function Home() {
           whileInView={{ opacity: 1, left: 0 }}
           className="relative text-[80px] mb-[20px] font-extrabold text-[#dad7cd]"
         >
-          Our Staring Collections
+          OUR STARING COLLECTIONS
         </motion.h1>
         <div className="w-screen grid grid-cols-7 mb-[20px]">
           <BannerCard collection="azuki" />
@@ -53,8 +54,8 @@ export default function Home() {
           transition={{ ease: "easeIn", duration: 0.25 }}
           className="relative w-[50%] p-[20px] pl-[40px] bg-[#344e41]"
         >
-          <h1 className="text-[65px] text-[#dad7cd] font-bold">What we do ?</h1>
-          <p className="text-[19px] text-[#dad7cd] mb-[20px]">
+          <h1 className="text-[65px] text-[#dad7cd] font-bold">WHAT WE DO ?</h1>
+          <p className="text-[17px] text-[#dad7cd] mb-[20px] font-medium">
             We help you get the best NFTs data from Azuki, Valhalla, Muri by
             Fabrik, 0n1-force, Azuki Elementals, Beanz Official.
           </p>
@@ -85,9 +86,9 @@ export default function Home() {
           className="relative bg-[#dad7cd] w-[50%] p-[20px] pr-[40px]"
         >
           <h1 className="text-[65px] text-[#344e41] font-bold">
-            Why you need us ?
+            WHY YOU NEED US ?
           </h1>
-          <p className="text-[19px] text-[#344e41] mb-[30px]">
+          <p className="text-[17px] font-medium text-[#344e41] mb-[30px]">
             You need the BEST that&apos;s why you need us. Come and join us so
             we can help you out in making the right choice for your next NFT
           </p>
@@ -125,7 +126,9 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div></div>
+      <div className="relative h-[320px]" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}>
+        <Footer />
+      </div>
     </Suspense>
   );
 }
