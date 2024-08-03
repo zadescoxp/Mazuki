@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="fixed w-full h-[320px] bottom-0 flex justify-between text-[#dad7cd] bg-[#344e41] font-medium border-b-[10px] border-[#dad7cd]">
+    <div className="fixed w-full h-[320px] bottom-0 flex justify-between text-[#dad7cd] bg-[#111111] font-medium border-b-[10px] border-[#dad7cd]">
       <div className="ml-[20px]">
         <Image src={"/assets/logo.png"} height={50} width={100} alt="Logo" />
         <p className="mt-[-25px]">
@@ -20,12 +20,12 @@ export default function Footer() {
         />
         <div className="p-[30px] flex flex-col border-l-[0.5px] border-[#dad7cd]">
           <h1 className="font-bold mb-[5px]">ABOUT US</h1>
-          <Link href="">KNOW MORE</Link>
-          <Link href="">GALLERY</Link>
-          <Link href="">COLLECTIONS</Link>
+          <Link href="/about">KNOW MORE</Link>
+          <Link href="/gallery">GALLERY</Link>
+          <Link href="/collection">COLLECTIONS</Link>
 
           <h1 className="font-bold mt-[20px] mb-[5px]">TECHNOLOGY</h1>
-          <Link href="">OPENSEA</Link>
+          <Link target="_blank" href="https://opensea.io/">OPENSEA</Link>
         </div>
         <div className="p-[30px] flex flex-col border-l-[0.5px] border-[#dad7cd]">
           <h1 className="font-bold mb-[5px]">OTHER</h1>
