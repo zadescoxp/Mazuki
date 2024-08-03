@@ -20,14 +20,14 @@ export default function RootLayout({ children }) {
         <div className="w-screen z-10 flex items-center justify-between p-[1%] fixed top-0 left-0 overflow-x-hidden">
           <Link href="/"><Image src={"/assets/logo.png"} height={50} width={100} alt="Logo" /></Link>
 
-          <div className="flex justify-center w-[auto] gap-x-[2px] bg-[rgba(218,215,205,0.5)] rounded-full border-[#344e41] border-[1px] text-[17px] p-[10px] font-medium">
+          <div className="flex justify-center w-[auto] gap-x-[2px] bg-[rgba(218,215,205,0.5)] rounded-full border-[#111111] border-[1px] text-[17px] p-[10px] font-medium">
           {/* p-[25px] pl-[40px] pr-[40px] */}
-            <Link href="/about" className="text-black rounded-full p-[10px] pr-[20px] pl-[20px] hover:bg-[#344e41] hover:text-[#DAD7CD] ease-in duration-200">ABOUT</Link>
-            <Link href="/gallery" className="text-black rounded-full p-[10px] pr-[20px] pl-[20px] hover:bg-[#344e41] hover:text-[#DAD7CD] ease-in duration-200">GALLERY</Link>
-            <Link href="/collections" className="text-black rounded-full p-[10px] pr-[20px] pl-[20px] hover:bg-[#344e41] hover:text-[#DAD7CD] ease-in duration-200">COLLECTIONS</Link>
+            <Link href="/about" className="text-black rounded-full p-[10px] pr-[20px] pl-[20px] hover:bg-[#111111] hover:text-[#DAD7CD] ease-in duration-200">ABOUT</Link>
+            <Link href="/gallery" className="text-black rounded-full p-[10px] pr-[20px] pl-[20px] hover:bg-[#111111] hover:text-[#DAD7CD] ease-in duration-200">GALLERY</Link>
+            <Link href="/collection" className="text-black rounded-full p-[10px] pr-[20px] pl-[20px] hover:bg-[#111111] hover:text-[#DAD7CD] ease-in duration-200">COLLECTIONS</Link>
           </div>
 
-          <div className="flex justify-between w-[auto] gap-x-[15px] items-center bg-[rgba(218,215,205,0.5)] rounded-full border-[#344e41] border-[1px] p-[20px] pl-[40px] pr-[40px] mr-[15px]">
+          <div className="flex justify-between w-[auto] gap-x-[15px] items-center bg-[rgba(218,215,205,0.5)] rounded-full border-[#111111] border-[1px] p-[20px] pl-[40px] pr-[40px] mr-[15px]">
             <Link href="https://discord.com/invite/opensea" target="_blank">
               <Image
                 src={"/assets/discord.svg"}
