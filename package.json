@@ -19,6 +19,7 @@
     "react": "^18",
     "react-css-spinners": "^4.0.2",
     "react-dom": "^18",
+    "react-loading-skeleton": "^3.4.0",
     "react-spinners": "^0.14.1",
     "react-use-measure": "^2.1.1",
     "tailwind-merge": "^2.4.0"
