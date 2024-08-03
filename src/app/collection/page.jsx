@@ -1,7 +1,7 @@
 "use client";
 
 import CollectionCard from "@/components/CollectionCard";
-import Loading from "@/components/loading";
+import Loading from "@/app/loading";
 import { Suspense } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";

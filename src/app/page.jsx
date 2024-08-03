@@ -2,16 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import BannerCard from "@/components/BannerCard";
 import Link from "next/link";
 import { Suspense } from "react";
-import Loading from "@/components/loading";
+import Loading from "@/app/loading";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-
   return (
-    <Suspense fallback={<Loading />}>
+    <>
       <div
         className="h-screen w-screen overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/bg-video-gif.gif')" }}
@@ -92,7 +90,6 @@ export default function Home() {
 
       <div className="group w-screen h-[720px] bg-[url('/assets/promo.png')] bg-cover bg-center]">
         <motion.div className="w-full h-full bg-[rgba(0,0,0,0.85)] hidden justify-center items-center group-hover:flex">
-           
           <Link
             className="bg-[#dad7cd] inline-flex justify-center items-center gap-x-2 p-[20px] rounded-full pl-[40px] pr-[40px] text-lg font-medium hover:bg-[#92908a]"
             href={"/gallery"}
@@ -108,9 +105,12 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="relative h-[320px]" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}>
+      <div
+        className="relative h-[320px]"
+        style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+      >
         <Footer />
       </div>
-    </Suspense>
+    </>
   );
 }

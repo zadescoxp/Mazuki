@@ -1,13 +1,10 @@
 "use client";
 
-import Loading from "@/components/loading";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Suspense } from "react";
 
 export default function About() {
   return (
-    <Suspense fallback={<Loading />}>
       <div className="flex h-screen w-screen">
         <div className="relative h-screen w-[60%] bg-[#111111] text-[#dad7cd]">
           <motion.div className="w-[60%] p-[20px] bottom-0 absolute mb-[20px]">
@@ -23,7 +20,7 @@ export default function About() {
               initial={{ x: "-100vw" }}
               animate={{ x: 0 }}
               transition={{ delay: 0.2, duration: 0.2 }}
-              className="font-medium text-[13.5px] mb-[30px]"
+              className="font-normal text-[15px] mb-[30px]"
             >
               Welcome to Mazuki, your premier source for insights into the world
               of anime NFTs. At Mazuki, we are passionate about merging the
@@ -54,6 +51,5 @@ export default function About() {
           style={{ backgroundImage: "url('/assets/promo.png')" }}
         ></div>
       </div>
-    </Suspense>
   );
 }
