@@ -1,12 +1,55 @@
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
+// import { Poppins } from "next/font/google";
+import { Suspense } from "react";
+import Loading from "./loading.js";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-});
+// const poppins = Poppins({
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   subsets: ["latin"],
+// });
+
+const helvetica = localFont({
+  src: [{
+    path: '../../fonts/font/HelveticaNowDisplay-Thin.woff2',
+    weight: "100",
+    style: "normal"
+  },
+  {
+    path: '../../fonts/font/HelveticaNowDisplay-Regular.woff2',
+    weight: "200",
+    style: "normal"
+  },
+  {
+    path: '../../fonts/font/HelveticaNowDisplay-Medium.woff2',
+    weight: "300",
+    style: "normal"
+  },
+  {
+    path: '../../fonts/font/HelveticaNowDisplay-Bold.woff2',
+    weight: "400",
+    style: "normal"
+  },
+  {
+    path: '../../fonts/font/HelveticaNowDisplay-ExtraBold.woff2',
+    weight: "500",
+    style: "normal"
+  },
+  {
+    path: '../../fonts/font/HelveticaNowDisplay-Black.woff2',
+    weight: "600",
+    style: "normal"
+  },
+  {
+    path: '../../fonts/font/HelveticaNowDisplay-ExtBlk.woff2',
+    weight: "700",
+    style: "normal"
+  }
+
+  ]
+})
 
 export const metadata = {
   title: "Mazuki",
@@ -14,9 +57,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={helvetica.className}>
+        <Suspense fallback={<Loading />}>
         <div className="w-screen z-10 flex items-center justify-between p-[1%] fixed top-0 left-0 overflow-x-hidden">
           <Link href="/"><Image src={"/assets/logo.png"} height={50} width={100} alt="Logo" /></Link>
 
@@ -49,6 +94,7 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         {children}
+        </Suspense>
       </body>
     </html>
   );
