@@ -28,31 +28,13 @@ export default function Home() {
           </Link>
         </motion.p>
       </div>
-      <div className="bg-[#0d0d0d] p-[20px] text-center">
-        <motion.h1
-          initial={{ opacity: 0, left: -100 }}
-          whileInView={{ opacity: 1, left: 0 }}
-          className="relative text-[80px] mb-[20px] font-extrabold text-[#dad7cd]"
-        >
-          OUR STARING COLLECTIONS
-        </motion.h1>
-        <div className="w-screen grid grid-cols-7 mb-[20px]">
-          <BannerCard collection="azuki" />
-          <BannerCard collection="valhalla" />
-          <BannerCard collection="muribyfabrik" />
-          <BannerCard collection="pxnghostdivision" />
-          <BannerCard collection="0n1-force" />
-          <BannerCard collection="azukielementals" />
-          <BannerCard collection="beanzofficial" />
-        </div>
-      </div>
 
       <div className="w-screen flex">
         <motion.div
           initial={{ opacity: 0, left: -50 }}
           whileInView={{ opacity: 1, left: 0 }}
           transition={{ ease: "easeIn", duration: 0.25 }}
-          className="relative w-[50%] p-[20px] pl-[40px] bg-[#344e41]"
+          className="relative w-[50%] p-[20px] pl-[40px] bg-[#111111]"
         >
           <h1 className="text-[65px] text-[#dad7cd] font-bold">WHAT WE DO ?</h1>
           <p className="text-[17px] text-[#dad7cd] mb-[20px] font-medium">
@@ -65,7 +47,7 @@ export default function Home() {
           >
             Learn More{" "}
             <Image
-              src="/assets/right-arrow.png"
+              src="/assets/link-arrow-dark.svg"
               height={70}
               width={35}
               alt="What we do ?"
@@ -85,15 +67,15 @@ export default function Home() {
           transition={{ ease: "easeIn", duration: 0.25 }}
           className="relative bg-[#dad7cd] w-[50%] p-[20px] pr-[40px]"
         >
-          <h1 className="text-[65px] text-[#344e41] font-bold">
+          <h1 className="text-[65px] text-[#111111] font-bold">
             WHY YOU NEED US ?
           </h1>
-          <p className="text-[17px] font-medium text-[#344e41] mb-[30px]">
+          <p className="text-[17px] font-medium text-[#111111] mb-[30px]">
             You need the BEST that&apos;s why you need us. Come and join us so
             we can help you out in making the right choice for your next NFT
           </p>
           <Link
-            className="bg-[#344e41] text-[#dad7cd] p-[13px] pl-[20px] pr-[20px] font-medium rounded-full transition-all hover:bg-[#202f28]"
+            className="bg-[#111111] text-[#dad7cd] p-[13px] pl-[20px] pr-[20px] font-medium rounded-full transition-all hover:bg-[#202f28]"
             href={"/about"}
           >
             Join Us
@@ -117,7 +99,7 @@ export default function Home() {
           >
             See Gallery{" "}
             <Image
-              src="/assets/right-arrow.png"
+              src="/assets/link-arrow-dark.svg"
               height={65}
               width={32.5}
               alt="What we do ?"
