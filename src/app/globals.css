@@ -9,5 +9,14 @@
 }
 body {
   overflow-x: hidden;
+  background: #111;
+}
+::-webkit-scrollbar{
+  width: 13px;
+}
+::-webkit-scrollbar-track {
+  background: #333;
+}
+::-webkit-scrollbar-thumb {
   background: #000;
 }
