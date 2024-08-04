@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Suspense } from "react";
-import Loading from "@/app/loading";
 import Footer from "@/components/Footer";
 
 export default function Home() {

@@ -9,7 +9,7 @@ export default function CollectionCard({ collection }) {
     method: "GET",
     headers: {
       accept: "application/json",
-      "x-api-key": process.env.NEXT_PUBLIC_OPENSEA_API,
+      "x-api-key": "480e1cb940e54db3bc01a5c95d2c03cc",
     },
   };
 
