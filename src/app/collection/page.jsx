@@ -25,7 +25,7 @@ export default function Collection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35 }}
-            className="text-[105px] font-bold"
+            className="text-[105px] font-bold max-md:text-[55px]"
           >
             COLLECTIONS
           </motion.h1>
@@ -33,7 +33,7 @@ export default function Collection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35 }}
-            className="font-medium mt-[-20px]"
+            className="font-medium mt-[-20px] max-md:text-[15px] max-md:font-normal max-md:mt-0"
           >
             HANDPICKED FOR YOU
           </motion.p>

@@ -26,7 +26,7 @@ export default function CollectionCard({ collection }) {
   }, []);
 
   return (
-    <div className="w-[50%] flex gap-x-10">
+    <div className="w-[50%] max-lg:w-[80%] flex gap-x-10 max-md:w-full max-md:flex-col max-md:items-center">
       <div className="">
         <Image src={data.image_url} height={200} width={200} alt={data.name} />
 
@@ -52,7 +52,7 @@ export default function CollectionCard({ collection }) {
         )}
       </div>
 
-      <div className="w-[60%]">
+      <div className="w-[60%] max-md:w-[85%] max-md:mt-[15px] max-md:font-light">
         <p className="mb-[20px] text-[13px]">{data.description}</p>
         <Link
           className="text-sm font-medium p-[10px] pl-[15px] pr-[15px] bg-[#111111] rounded-full hover:bg-[#222222]"

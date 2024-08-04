@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function About() {
   return (
-      <div className="flex h-screen w-screen">
-        <div className="relative h-screen w-[60%] bg-[#111111] text-[#dad7cd]">
-          <motion.div className="w-[60%] p-[20px] bottom-0 absolute mb-[20px]">
+      <div className="flex h-screen w-screen max-md:flex-col-reverse">
+        <div className="relative h-screen w-[60%] bg-[#111111] text-[#dad7cd] max-md:w-[100%]">
+          <motion.div className="w-[60%] p-[20px] bottom-0 absolute mb-[20px] max-md:w-[100%] max-md:top-0">
             <motion.h1
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
@@ -47,7 +47,7 @@ export default function About() {
           </motion.div>
         </div>
         <div
-          className="w-[40%] h-full bg-cover bg-center"
+          className="w-[40%] h-full bg-cover bg-center max-md:w-[100%]"
           style={{ backgroundImage: "url('/assets/promo.png')" }}
         ></div>
       </div>

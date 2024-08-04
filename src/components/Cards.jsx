@@ -33,7 +33,7 @@ export default function Cards({ collection }) {
     <Skeleton />;
   }
   return (
-    <div className="mb-[10px] w-full flex flex-wrap justify-center gap-x-[15px] gap-y-[10px]">
+    <div className="mb-[10px] w-full flex flex-wrap justify-center gap-x-[15px] gap-y-[10px] max-md:gap-x-[10px]">
       {data.map((data, index) => (
         <Link
           className="relative group"
