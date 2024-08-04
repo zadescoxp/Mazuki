@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ export default function CollectionCard({ collection }) {
     method: "GET",
     headers: {
       accept: "application/json",
-      "x-api-key": "480e1cb940e54db3bc01a5c95d2c03cc",
+      "x-api-key": NEXT_PUBLIC_OPENSEA_API,
     },
   };
 

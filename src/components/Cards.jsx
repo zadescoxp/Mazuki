@@ -11,7 +11,7 @@ export default function Cards({ collection }) {
     method: "GET",
     headers: {
       accept: "application/json",
-      "x-api-key": "480e1cb940e54db3bc01a5c95d2c03cc",
+      "x-api-key": NEXT_PUBLIC_OPENSEA_API,
     },
   };
 
