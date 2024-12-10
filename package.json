@@ -15,7 +15,7 @@
     "@kinde-oss/kinde-auth-nextjs": "^2.3.6",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.19",
-    "next": "14.2.5",
+    "next": "14.2.20",
     "react": "^18",
     "react-css-spinners": "^4.0.2",
     "react-dom": "^18",
